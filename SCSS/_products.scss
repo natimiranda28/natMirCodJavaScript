@@ -1,0 +1,18 @@
+.bg-oferta{
+    background-image: url("fondo.webp");
+}
+
+.tituloOferta{
+    text-align: center;
+    background-color: rgb(203, 50, 52);
+}
+
+article{
+    border-radius: 5%;
+    text-align: center;
+    img{
+        width: 300px;
+        height: 300px;
+        border-radius: 5%;
+    }
+}
