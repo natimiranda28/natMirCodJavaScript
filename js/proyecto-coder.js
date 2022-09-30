@@ -35,6 +35,12 @@ function calcula_plan(producto,nro_cuotas){
             break;
         default:
             console.log("Lo lamento! La opcion que elegiste no es posible, recuerda que cuentas con los planes 1, 3, 6, 12")
+            Toastify({
+                text: "El plan de cuotas no existe!",
+                duration: 3000,
+                gravity: 'up',
+                position: 'right',
+            }).showToast();
             return 0
     }
 }
@@ -63,30 +69,65 @@ function mostrarCliente(cliente){
     nuevoContenido.innerHTML = `<h1> Felicidades por tu compra  ${cliente.nombre} ! Los datos de tu compra por ${cliente.precio} en ${cliente.cuotas} comodas cuotas ya fueron guardadas en tu cuenta! Proximamente recibiras los detalles de tu compra en tu correo: ${cliente.correo} por un total de ${cliente.saldo} $</h1>`;
     nuevoContenido.className = "info-cliente";
     formulario.appendChild(nuevoContenido);
+    Toastify({
+        text: "Su compra ha sido concretada! Click para ver ticket!",
+        duration: 3000,
+        gravity: 'up',
+        position: 'right',
+        destination: "https://facebook.com",
+        newWindow: true,
+        style: {
+            background: "linear-gradient(to right, #b2ffff, #008f39)",
+        }
+    }).showToast();
 }  
 
 function suma_product1(){
     localStorage.setItem("monedero",parseInt(parseInt(localStorage.getItem("monedero")) + 50000))
     console.log(localStorage.getItem("monedero"))
     document.getElementById('precio').value=localStorage.getItem("monedero");
+    Toastify({
+        text: "Ruedas Humanac agregadas al carrito!",
+        duration: 3000,
+        gravity: 'up',
+        position: 'right',
+    }).showToast();
 }
 
 function suma_product2(){
     localStorage.setItem("monedero",parseInt(parseInt(localStorage.getItem("monedero")) + 13000))
     console.log(localStorage.getItem("monedero"))
     document.getElementById('precio').value=localStorage.getItem("monedero");
+    Toastify({
+        text: "Parabrisas Northwest agregadas al carrito!",
+        duration: 3000,
+        gravity: 'up',
+        position: 'right',
+    }).showToast();
 }
 
 function suma_product3(){
     localStorage.setItem("monedero",parseInt(parseInt(localStorage.getItem("monedero")) + 4000))
     console.log(localStorage.getItem("monedero"))
     document.getElementById('precio').value=localStorage.getItem("monedero");
+    Toastify({
+        text: "Maniubro steel series agregadas al carrito!",
+        duration: 3000,
+        gravity: 'up',
+        position: 'right',
+    }).showToast();
 }
 
 function suma_product4(){
     localStorage.setItem("monedero",parseInt(parseInt(localStorage.getItem("monedero")) + 30000))
     console.log(localStorage.getItem("monedero"))
     document.getElementById('precio').value=localStorage.getItem("monedero");
+    Toastify({
+        text: "Bujias Manuelito agregadas al carrito!",
+        duration: 3000,
+        gravity: 'up',
+        position: 'right',
+    }).showToast();
 }
 
 let boton2 = document.getElementById("sendInfo2");
