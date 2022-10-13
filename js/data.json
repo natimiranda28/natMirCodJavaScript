@@ -1,0 +1,22 @@
+[{
+    "id": 1,
+    "nombre": "Valvulas El Potente",
+    "precio": 2000,
+    "fabricante": "Valve",
+    "descripcion": "Las mejores valvulas"
+},
+{
+    "id": 2,
+    "nombre": "Ruedas Motocicleta Roar",
+    "precio": 15000,
+    "fabricante": "Roar Inc.",
+    "descripcion": "Ruedas de moto de alta densidad"
+},
+{
+    "id": 3,
+    "nombre": "Cinturones UlraSeg",
+    "precio": 1500,
+    "fabricante": "UltraSeg",
+    "descripcion": "Cinturones de plastico reforzado"
+}
+]

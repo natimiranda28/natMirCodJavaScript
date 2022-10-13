@@ -2,11 +2,13 @@
   "name": "repuest-nat-miranda",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/main.scss css/main.css",
     "watch-css": "nodemon -e scss -x \"npm     run build-css\"",
-    "build": "purgecss --css css/main.css --content index.html -o css/reducido.css"
+    "build": "purgecss --css css/main.css --content index.html -o css/reducido.css",
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
@@ -54,6 +56,7 @@
     "concat-map": "^0.0.1",
     "console-control-strings": "^1.1.0",
     "core-util-is": "^1.0.2",
+    "cors": "^2.8.5",
     "cross-spawn": "^7.0.3",
     "dashdash": "^1.14.1",
     "debug": "^4.3.4",
@@ -70,6 +73,7 @@
     "error-ex": "^1.3.2",
     "escalade": "^3.1.1",
     "escape-string-regexp": "^1.0.5",
+    "express": "^4.18.2",
     "extend": "^3.0.2",
     "extsprintf": "^1.3.0",
     "fast-deep-equal": "^3.1.3",
@@ -246,5 +250,13 @@
     "yargs": "^17.5.1",
     "yargs-parser": "^20.2.9"
   },
-  "description": ""
+  "description": "Desarrollo de la cursada de Coderhouse - Javascript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natimiranda28/natMirCodJavaScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/natimiranda28/natMirCodJavaScript/issues"
+  },
+  "homepage": "https://github.com/natimiranda28/natMirCodJavaScript#readme"
 }
