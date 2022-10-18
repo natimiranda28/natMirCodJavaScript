@@ -5,6 +5,7 @@ localStorage.setItem("cantProd1",0)
 localStorage.setItem("cantProd2",0)
 localStorage.setItem("cantProd3",0)
 localStorage.setItem("cantProd4",0)
+localStorage.setItem("mainCliente",0)
 
 class Cliente {
     constructor(nombre, correo, precio, cuotas) {
@@ -61,10 +62,26 @@ function cargaCliente() {
     let precio_final = calcula_plan(precio, cuotas)
     //actualizamos el saldo total del cliente luego de su comrpa
     cliente1.saldo= cliente1.saldo + precio_final;
+    localStorage.setItem("mainCliente",cliente1)
+    console.log(localStorage.getItem("mainCliente"))
     mostrarCliente(cliente1);
+    creaCarritoCompras(cliente1)
 }
 
 //funcion dedicada a mostrar los datos del cliente en nuestra pagina 
+
+function creaCarritoCompras(cliente){
+    let formulario = document.querySelector("#carrito-compras");
+    let nuevoContenido = document.createElement("div");
+    nuevoContenido.innerHTML = 
+    `<h1> Datos de tu factura de compra</h1>
+    <h2> Factura a nombre de  ${cliente.nombre}</h1> 
+    <h2> Total de tu compra: ${cliente.precio} realizadas en ${cliente.cuotas} cuptas</h2> 
+    <h2> Correo del comprador: ${cliente.correo}</h2>
+    <h2> Saldo total de la compra: ${cliente.saldo} $</h2>`;
+    nuevoContenido.className = "info-cliente";
+    formulario.appendChild(nuevoContenido);
+}
 
 function mostrarCliente(cliente){
     let formulario = document.querySelector("#cliente");
@@ -346,3 +363,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         listaNuevos.append(div);
     })
 })
+
+
+
+//creamos el carrito de compras para el cliente
+
