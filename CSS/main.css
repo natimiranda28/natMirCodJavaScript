@@ -54,6 +54,17 @@ article {
   .newProduct h3, .newProduct .h3 {
     background-image: url("../Media/fondo.webp"); }
 
+.prod-individual {
+  text-align: left;
+  background-color: lightblue;
+  border-style: solid;
+  border-color: lightgray;
+  padding: 10px;
+  margin: 5px; }
+
+.carrito-compra {
+  background-color: lightgreen; }
+
 footer {
   grid-area: footer;
   background-color: #ffe6f7;

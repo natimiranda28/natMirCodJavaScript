@@ -78,10 +78,10 @@
           <h5>Precio: <span class="PrecioProduct">$50000</span></h5>
           <h5>Fabricante: <a href="https://www.instagram.com">Humanac</a></h5>
           <h5>Descripcion: Rueda tmanaño grande de alta densidad</h5>
-          <a class="btn btn-primary m-1" id="sendInfo1" href="#">Añadir al carro</a>
-          <a class="btn btn-primary m-1" id="quitar-prod1" href="#">-</a>
-          <p class="cant-prod" id="cantProd1">0</p>
-          <a class="btn btn-primary m-1" id="aniadir-prod1" href="#">+</a>
+          <h4 class="btn btn-primary m-1">Comprar: </h4>
+          <button class="btn btn-primary m-1" onclick="quita_prod(50000,1)">-</button>
+          <p class="btn btn-primary m-1" id="cantProd1">0</p>
+          <button class="btn btn-primary m-1" onclick="suma_prod(50000,1)">+</button>
         </article>
 
         <article class="col-md-6 col-lg-3 bg-oferta">
@@ -90,10 +90,10 @@
           <h5>Precio: <span class="PrecioProduct">$13000</span></h5>
           <h5>Fabricante: <a href="https://www.instagram.com">Solcito SRL.</a></h5>
           <h5>Descripcion: Parabrisas compactos para nieve y desierto</span></h5>
-          <button class="btn btn-primary m-2" id="sendInfo2">Añadir al carro</button>
-          <a class="btn btn-primary m-1" id="quitar-prod2" href="#">-</a>
-          <p class="cant-prod" id="cantProd2">0</p>
-          <a class="btn btn-primary m-1" id="aniadir-prod2" href="#">+</a>
+          <h4 class="btn btn-primary m-1">Comprar: </h4>
+          <button class="btn btn-primary m-1" onclick="quita_prod(13000,2)">-</button>
+          <p class="btn btn-primary m-1" id="cantProd2">0</p>
+          <button class="btn btn-primary m-1" onclick="suma_prod(13000,2)">+</button>
         </article>
 
         <article class="col-md-6 col-lg-3 bg-oferta">
@@ -102,10 +102,10 @@
           <h5>Precio: <span class="PrecioProduct">$4000</span></h5>
           <h5>Fabricante: <a href="https://www.instagram.com">SteelSeries</a></h5>
           <h5>Descripcion: Manubrio de acero inoxidable con aeroventilas incorporadas</span></h5>
-          <button class="btn btn-primary m-2" id="sendInfo3">Añadir al carro</button>
-          <a class="btn btn-primary m-1" id="quitar-prod3" href="#">-</a>
-          <p class="cant-prod" id="cantProd3">0</p>
-          <a class="btn btn-primary m-1" id="aniadir-prod3" href="#">+</a>
+          <h4 class="btn btn-primary m-1">Comprar: </h4>
+          <button class="btn btn-primary m-1" onclick="quita_prod(4000,3)">-</button>
+          <p class="btn btn-primary m-1" id="cantProd3">0</p>
+          <button class="btn btn-primary m-1" onclick="suma_prod(4000,3)">+</button>
         </article>
 
         <article class="col-md-6 col-lg-3 bg-oferta">
@@ -114,10 +114,10 @@
           <h5>Precio: <span class="PrecioProduct">$30000</span></h5>
           <h5>Fabricante: <a href="https://www.instagram.com">Manuelito Bujias</a></h5>
           <h5>Descripcion: Bujias de alta gama</span></h5>
-          <button class="btn btn-primary m-2" id="sendInfo4">Añadir al carro</button>
-          <a class="btn btn-primary m-1" id="quitar-prod4" href="#">-</a>
-          <p class="cant-prod" id="cantProd4">0</p>
-          <a class="btn btn-primary m-1" id="aniadir-prod4" href="#">+</a>
+          <h4 class="btn btn-primary m-1">Comprar: </h4>
+          <button class="btn btn-primary m-1" onclick="quita_prod(30000,4)">-</button>
+          <p class="btn btn-primary m-1" id="cantProd4">0</p>
+          <button class="btn btn-primary m-1" onclick="suma_prod(30000,4)">+</button>
         </article>
       </div>
   </section>
@@ -167,8 +167,22 @@
   </div>
 
   <section id="carrito-compras">
+    
+  </section>
+
+  <section id="prod-indiv1">
 
   </section>
+
+  <section id="prod-indiv2">
+
+  </section>
+
+  <section id="prod-indiv3">
+
+  </section>
+
+  <section id="prod-indiv4">
 
   <footer class="bg-pageRed p-2">
     <h2 class="elem-foot">Contactate con nosotros y mantenete al tanto de las novedades de nuestra tienda en:
