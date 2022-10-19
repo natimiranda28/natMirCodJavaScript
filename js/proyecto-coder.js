@@ -5,7 +5,6 @@ localStorage.setItem("cantProd1",0)
 localStorage.setItem("cantProd2",0)
 localStorage.setItem("cantProd3",0)
 localStorage.setItem("cantProd4",0)
-localStorage.setItem("mainCliente",0)
 
 class Cliente {
     constructor(nombre, correo, precio, cuotas) {
@@ -62,25 +61,40 @@ function cargaCliente() {
     let precio_final = calcula_plan(precio, cuotas)
     //actualizamos el saldo total del cliente luego de su comrpa
     cliente1.saldo= cliente1.saldo + precio_final;
-    localStorage.setItem("mainCliente",cliente1)
-    console.log(localStorage.getItem("mainCliente"))
-    mostrarCliente(cliente1);
     creaCarritoCompras(cliente1)
+    mostrarCliente(cliente1);
+    
 }
 
 //funcion dedicada a mostrar los datos del cliente en nuestra pagina 
 
 function creaCarritoCompras(cliente){
-    let formulario = document.querySelector("#carrito-compras");
-    let nuevoContenido = document.createElement("div");
-    nuevoContenido.innerHTML = 
-    `<h1> Datos de tu factura de compra</h1>
-    <h2> Factura a nombre de  ${cliente.nombre}</h1> 
-    <h2> Total de tu compra: ${cliente.precio} realizadas en ${cliente.cuotas} cuptas</h2> 
-    <h2> Correo del comprador: ${cliente.correo}</h2>
-    <h2> Saldo total de la compra: ${cliente.saldo} $</h2>`;
-    nuevoContenido.className = "info-cliente";
-    formulario.appendChild(nuevoContenido);
+    let carrito = document.querySelector("#carrito-compras");
+    carrito.innerHTML = "";
+    let div = document.createElement("section");
+    if( parseInt(cliente.saldo) >= 20000){
+        div.innerHTML = `
+        <h1> Datos de tu factura de compra</h1>
+        <h2> Factura a nombre de  ${cliente.nombre}</h1> 
+        <h2> Total de tu compra: ${cliente.precio} realizadas en ${cliente.cuotas} cuptas</h2> 
+        <h2> Cantidad de cuotas: ${cliente.cuotas}</h2>
+        <h2> Correo del comprador: ${cliente.correo}</h2>
+        <h2> Total de la compra: ${cliente.saldo} $</h2>
+        <h2> Como la suma de tu compra es superior a $20000 entras automaticamente al sorteo de un super televisor 80 pulgadas 4k! Mucha suerte!
+        `;
+        carrito.append(div);
+    }
+    else{
+        div.innerHTML = 
+        `<h1> Datos de tu factura de compra</h1>
+        <h2> Factura a nombre de  ${cliente.nombre}</h1> 
+        <h2> Total de tu compra: ${cliente.precio} realizadas en ${cliente.cuotas} cuptas</h2> 
+        <h2> Cantidad de cuotas: ${cliente.cuotas}</h2>
+        <h2> Correo del comprador: ${cliente.correo}</h2>
+        <h2> Total de la compra: ${cliente.saldo} $</h2>
+        `;
+        carrito.append(div);
+    }
 }
 
 function mostrarCliente(cliente){
